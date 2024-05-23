@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Univer\\test-huest\\Lab8\\Net\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CC927B58-6F9D-4F55-B44C-711874980B83}|Aircompany\\Aircompany.csproj|c:\\univer\\test-huest\\lab8\\net\\aircompany\\models\\militarytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC927B58-6F9D-4F55-B44C-711874980B83}|Aircompany\\Aircompany.csproj|solutionrelative:aircompany\\models\\militarytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MilitaryType.cs",
+              "DocumentMoniker": "C:\\Univer\\test-huest\\Lab8\\Net\\Aircompany\\Models\\MilitaryType.cs",
+              "RelativeDocumentMoniker": "Aircompany\\Models\\MilitaryType.cs",
+              "ToolTip": "C:\\Univer\\test-huest\\Lab8\\Net\\Aircompany\\Models\\MilitaryType.cs",
+              "RelativeToolTip": "Aircompany\\Models\\MilitaryType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T23:06:23.092Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

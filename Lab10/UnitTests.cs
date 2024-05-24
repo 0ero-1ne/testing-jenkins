@@ -39,14 +39,28 @@ namespace Lab10
         }
 
         [Test]
-        public void Test_Germany_Localization_ReturnsTrue()
+        public void Add_Prouct_To_Cart_ReturnsTrue()
         {
-            var expectedLoclizationResult = new LinkinParkStoreHomePage(webDriver)
+            var isProductInCard = new LinkinParkCartPage(webDriver)
                 .NavigateToHomePage()
-                .SetStoreLocalization(Localization.GERMANY)
-                .GetSupportHeaderText();
-
-            Assert.That(expectedLoclizationResult, Is.EqualTo("Kundenservice".ToUpper()));
+                .OpenProductPage()
+                .AddGoodToCart()
+                .OpenCartPage()
+                .IsProductInCart();
+            Assert.That(isProductInCard, Is.EqualTo(true));
         }
+
+        // [Test]
+        // public void Is_Promo_Code_Wrong_ReturnsTrue()
+        // {
+        //     var isProductInCard = new LinkinParkCartPage(webDriver)
+        //         .NavigateToHomePage()
+        //         .OpenProductPage()
+        //         .AddGoodToCart()
+        //         .OpenCartPage()
+        //         .EnterPromoCode()
+        //         .IsPromoCodeEntered();
+        //     Assert.That(isProductInCard, Is.EqualTo(true));
+        // }
     }
 }

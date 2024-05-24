@@ -11,9 +11,9 @@ namespace Lab11_12
         private WebDriverWait webDriverWait;
         private readonly string HomePageUrl = UrlUtils.HOME_PAGE;
 
-        public LinkinParkStoreHomePage(IWebDriver _webDriver)
+        public LinkinParkStoreHomePage(IWebDriver webDriver)
         {
-            webDriver = _webDriver;
+            this.webDriver = webDriver;
             webDriverWait = new(webDriver, TimeSpan.FromSeconds(10));
         }
 
@@ -36,25 +36,21 @@ namespace Lab11_12
                 case Localization.SPANISH:
                     localizationButton = webDriver.FindElement(By.XPath("//*[@data-locale='es_ES']"));
                     localizationButton.Click();
-                    webDriverWait.Until(driver => driver.Url.Contains(UrlUtils.SPANISH_URL));
                     break;
                 case Localization.AMERICAN:
                     localizationButton = webDriver.FindElement(By.XPath("//*[@data-locale='en']"));
                     localizationButton.Click();
-                    webDriverWait.Until(driver => driver.Url.Contains(UrlUtils.AMERICAN_URL));
                     break;
                 case Localization.BRITAIN:
                     localizationButton = webDriver.FindElement(By.XPath("//*[@data-locale='en_GB']"));
                     localizationButton.Click();
-                    webDriverWait.Until(driver => driver.Url.Contains(UrlUtils.BRITAIN_URL));
                     break;
                 case Localization.GERMANY:
                     localizationButton = webDriver.FindElement(By.XPath("//*[@data-locale='de_DE']"));
                     localizationButton.Click();
-                    webDriverWait.Until(driver => driver.Url.Contains(UrlUtils.GERMANY_URL));
                     break;
             }
-            Thread.Sleep(3000);
+            Thread.Sleep(7000);
 
             return this;
         }

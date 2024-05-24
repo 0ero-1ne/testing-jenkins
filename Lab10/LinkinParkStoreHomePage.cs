@@ -54,7 +54,7 @@ namespace Lab10
                     webDriverWait.Until(driver => driver.Url.Contains("https://linkinpark.warnerartists.net/de/"));
                     break;
             }
-            Thread.Sleep(3000);
+            Thread.Sleep(5000);
 
             return this;
         }

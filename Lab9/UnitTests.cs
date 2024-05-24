@@ -48,6 +48,7 @@ namespace Lab9
 
             IWebElement localizationButton = webDriver.FindElement(By.XPath("//*[@data-locale='es_ES']"));
             localizationButton.Click();
+            wait.Until(driver => driver.Url.Contains("https://linkinpark.warnerartists.net/es/"));
             Thread.Sleep(3000);
 
             IWebElement localHeader = webDriver.FindElement(By.XPath("//*[@id='headingSupport']"));

@@ -17,27 +17,31 @@ namespace Lab11_12
         }
 
         [Test]
-        public void Test_Germany_Localization_ReturnsTrue()
+        public void Add_Prouct_To_Cart_ReturnsTrue()
         {
-            var expectedLoclizationResult = new LinkinParkStoreHomePage(driver!)
+            var isProductInCard = new LinkinParkCartPage(driver!)
                 .NavigateToHomePage()
-                .SetStoreLocalization(Localization.GERMANY)
-                .GetSupportHeaderText();
+                .OpenProductPage()
+                .AddGoodToCart()
+                .OpenCartPage()
+                .IsProductInCart();
 
-            Assert.That(expectedLoclizationResult, Is.EqualTo("Kundenservice".ToUpper()));
-            Logger.D("Germany localization test completed");
+            Assert.That(isProductInCard, Is.EqualTo(true));
+            Logger.D("Product successfully added to cart");
         }
 
         [Test]
-        public void Test_Britain_Localization_ReturnsTrue()
+        public void Is_Promo_Code_Wrong_ReturnsTrue()
         {
-            var expectedLoclizationResult = new LinkinParkStoreHomePage(driver!)
+            var isProductInCard = new LinkinParkCartPage(driver)
                 .NavigateToHomePage()
-                .SetStoreLocalization(Localization.BRITAIN)
-                .GetSupportHeaderText();
-
-            Assert.That(expectedLoclizationResult, Is.EqualTo("SUPPORT"));
-            Logger.D("Britain localization test completed");
+                .OpenProductPage()
+                .AddGoodToCart()
+                .OpenCartPage()
+                .EnterPromoCode()
+                .IsPromoCodeEntered();
+            Assert.That(isProductInCard, Is.EqualTo(true));
+            Logger.D("Wrong promocode is passed the test");
         }
     }
 }
